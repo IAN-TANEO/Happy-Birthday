@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="slider.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
+</head>
+<body class="not-loaded">
+
+    <!-- 
+      AUDIO PLAYER: 
+      For the music to work, you must add a music file named "birthday_music.mp3" 
+      into the same folder as this index.html file.
+    -->
+    <audio id="birthday-music" src="birthday_music.mp3" loop preload="auto"></audio>
+
+    <div class="night"></div>
+    <!-- Cake Scene Section -->
+    <section class="scene" id="cake-section">
+        <div class="birthday-text">Happy birthday poooooo!</div>
+        <div class="cake">
+            <div class="plate"></div>
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="icing"></div>
+            <div class="drip drip1"></div>
+            <div class="drip drip2"></div>
+            <div class="drip drip3"></div>
+            <div class="candles">
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flower Animation Scene -->
+    <section class="flower-scene">
+        <div class="flowers">
+            <div class="flower flower--1"><div class="flower__leafs flower__leafs--1"><div class="flower__leaf flower__leaf--1"></div><div class="flower__leaf flower__leaf--2"></div><div class="flower__leaf flower__leaf--3"></div><div class="flower__leaf flower__leaf--4"></div><div class="flower__white-circle"></div><div class="flower__light flower__light--1"></div><div class="flower__light flower__light--2"></div><div class="flower__light flower__light--3"></div><div class="flower__light flower__light--4"></div><div class="flower__light flower__light--5"></div><div class="flower__light flower__light--6"></div><div class="flower__light flower__light--7"></div><div class="flower__light flower__light--8"></div></div><div class="flower__line"><div class="flower__line__leaf flower__line__leaf--1"></div><div class="flower__line__leaf flower__line__leaf--2"></div><div class="flower__line__leaf flower__line__leaf--3"></div><div class="flower__line__leaf flower__line__leaf--4"></div><div class="flower__line__leaf flower__line__leaf--5"></div><div class="flower__line__leaf flower__line__leaf--6"></div></div></div>
+            <div class="flower flower--2"><div class="flower__leafs flower__leafs--2"><div class="flower__leaf flower__leaf--1"></div><div class="flower__leaf flower__leaf--2"></div><div class="flower__leaf flower__leaf--3"></div><div class="flower__leaf flower__leaf--4"></div><div class="flower__white-circle"></div><div class="flower__light flower__light--1"></div><div class="flower__light flower__light--2"></div><div class="flower__light flower__light--3"></div><div class="flower__light flower__light--4"></div><div class="flower__light flower__light--5"></div><div class="flower__light flower__light--6"></div><div class="flower__light flower__light--7"></div><div class="flower__light flower__light--8"></div></div><div class="flower__line"><div class="flower__line__leaf flower__line__leaf--1"></div><div class="flower__line__leaf flower__line__leaf--2"></div><div class="flower__line__leaf flower__line__leaf--3"></div><div class="flower__line__leaf flower__line__leaf--4"></div></div></div>
+            <div class="flower flower--3"><div class="flower__leafs flower__leafs--3"><div class="flower__leaf flower__leaf--1"></div><div class="flower__leaf flower__leaf--2"></div><div class="flower__leaf flower__leaf--3"></div><div class="flower__leaf flower__leaf--4"></div><div class="flower__white-circle"></div><div class="flower__light flower__light--1"></div><div class="flower__light flower__light--2"></div><div class="flower__light flower__light--3"></div><div class="flower__light flower__light--4"></div><div class="flower__light flower__light--5"></div><div class="flower__light flower__light--6"></div><div class="flower__light flower__light--7"></div><div class="flower__light flower__light--8"></div></div><div class="flower__line"><div class="flower__line__leaf flower__line__leaf--1"></div><div class="flower__line__leaf flower__line__leaf--2"></div><div class="flower__line__leaf flower__line__leaf--3"></div><div class="flower__line__leaf flower__line__leaf--4"></div></div></div>
+            <div class="grow-ans" style="--d:1.2s"><div class="flower__g-long"><div class="flower__g-long__top"></div><div class="flower__g-long__bottom"></div></div></div>
+            <div class="growing-grass"><div class="flower__grass flower__grass--1"><div class="flower__grass--top"></div><div class="flower__grass--bottom"></div><div class="flower__grass__leaf flower__grass__leaf--1"></div><div class="flower__grass__leaf flower__grass__leaf--2"></div><div class="flower__grass__leaf flower__grass__leaf--3"></div><div class="flower__grass__leaf flower__grass__leaf--4"></div><div class="flower__grass__leaf flower__grass__leaf--5"></div><div class="flower__grass__leaf flower__grass__leaf--6"></div><div class="flower__grass__leaf flower__grass__leaf--7"></div><div class="flower__grass__leaf flower__grass__leaf--8"></div><div class="flower__grass__overlay"></div></div></div>
+            <div class="growing-grass"><div class="flower__grass flower__grass--2"><div class="flower__grass--top"></div><div class="flower__grass--bottom"></div><div class="flower__grass__leaf flower__grass__leaf--1"></div><div class="flower__grass__leaf flower__grass__leaf--2"></div><div class="flower__grass__leaf flower__grass__leaf--3"></div><div class="flower__grass__leaf flower__grass__leaf--4"></div><div class="flower__grass__leaf flower__grass__leaf--5"></div><div class="flower__grass__leaf flower__grass__leaf--6"></div><div class="flower__grass__leaf flower__grass__leaf--7"></div><div class="flower__grass__leaf flower__grass__leaf--8"></div><div class="flower__grass__overlay"></div></div></div>
+            <div class="grow-ans" style="--d:2.4s"><div class="flower__g-right flower__g-right--1"><div class="leaf"></div></div></div>
+            <div class="grow-ans" style="--d:2.8s"><div class="flower__g-right flower__g-right--2"><div class="leaf"></div></div></div>
+            <div class="grow-ans" style="--d:2.8s"><div class="flower__g-front"><div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--1"><div class="flower__g-front__leaf"></div></div><div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--2"><div class="flower__g-front__leaf"></div></div><div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--3"><div class="flower__g-front__leaf"></div></div><div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--4"><div class="flower__g-front__leaf"></div></div><div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--5"><div class="flower__g-front__leaf"></div></div><div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--6"><div class="flower__g-front__leaf"></div></div><div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--7"><div class="flower__g-front__leaf"></div></div><div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--8"><div class="flower__g-front__leaf"></div></div><div class="flower__g-front__line"></div></div></div>
+            <div class="grow-ans" style="--d:3.2s"><div class="flower__g-fr"><div class="leaf"></div><div class="flower__g-fr__leaf flower__g-fr__leaf--1"></div><div class="flower__g-fr__leaf flower__g-fr__leaf--2"></div><div class="flower__g-fr__leaf flower__g-fr__leaf--3"></div><div class="flower__g-fr__leaf flower__g-fr__leaf--4"></div><div class="flower__g-fr__leaf flower__g-fr__leaf--5"></div><div class="flower__g-fr__leaf flower__g-fr__leaf--6"></div><div class="flower__g-fr__leaf flower__g-fr__leaf--7"></div><div class="flower__g-fr__leaf flower__g-fr__leaf--8"></div></div></div>
+            <div class="long-g long-g--0"><div class="grow-ans" style="--d:3s"><div class="leaf leaf--0"></div></div><div class="grow-ans" style="--d:2.2s"><div class="leaf leaf--1"></div></div><div class="grow-ans" style="--d:3.4s"><div class="leaf leaf--2"></div></div><div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--3"></div></div></div>
+            <div class="long-g long-g--1"><div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--0"></div></div><div class="grow-ans" style="--d:3.8s"><div class="leaf leaf--1"></div></div><div class="grow-ans" style="--d:4s"><div class="leaf leaf--2"></div></div><div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--3"></div></div></div>
+            <div class="long-g long-g--2"><div class="grow-ans" style="--d:4s"><div class="leaf leaf--0"></div></div><div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--1"></div></div><div class="grow-ans" style="--d:4.4s"><div class="leaf leaf--2"></div></div><div class="grow-ans" style="--d:4.6s"><div class="leaf leaf--3"></div></div></div>
+            <div class="long-g long-g--3"><div class="grow-ans" style="--d:4s"><div class="leaf leaf--0"></div></div><div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--1"></div></div><div class="grow-ans" style="--d:3s"><div class="leaf leaf--2"></div></div><div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--3"></div></div></div>
+            <div class="long-g long-g--4"><div class="grow-ans" style="--d:4s"><div class="leaf leaf--0"></div></div><div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--1"></div></div><div class="grow-ans" style="--d:3s"><div class="leaf leaf--2"></div></div><div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--3"></div></div></div>
+            <div class="long-g long-g--5"><div class="grow-ans" style="--d:4s"><div class="leaf leaf--0"></div></div><div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--1"></div></div><div class="grow-ans" style="--d:3s"><div class="leaf leaf--2"></div></div><div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--3"></div></div></div>
+            <div class="long-g long-g--6"><div class="grow-ans" style="--d:4.2s"><div class="leaf leaf--0"></div></div><div class="grow-ans" style="--d:4.4s"><div class="leaf leaf--1"></div></div><div class="grow-ans" style="--d:4.6s"><div class="leaf leaf--2"></div></div><div class="grow-ans" style="--d:4.8s"><div class="leaf leaf--3"></div></div></div>
+            <div class="long-g long-g--7"><div class="grow-ans" style="--d:3s"><div class="leaf leaf--0"></div></div><div class="grow-ans" style="--d:3.2s"><div class="leaf leaf--1"></div></div><div class="grow-ans" style="--d:3.5s"><div class="leaf leaf--2"></div></div><div class="grow-ans" style="--d:3.6s"><div class="leaf leaf--3"></div></div></div>
+        </div>
+        <p class="scroll-prompt">Scroll down</p>
+        
+    </section>
+
+    <!-- Filmstrip Scene Section -->
+    <section class="scene" id="slider-section">
+        <div class="slider-container">
+            <div class="slider">
+                <!-- 
+                  PHOTO INSTRUCTIONS:
+                  For the photos to work, you must replace the "src" value with the name of your photo file.
+                  Example: <img src="my-photo-1.jpg" alt="Memory 1">
+                -->
+                <div class="slide" ><img src="images/funny1.jpg" /><p>This is a fun memory!</p></div>
+                <div class="slide" ><img src="images/funny2.jpg" /><p>Another great moment.</p></div>
+                <div class="slide" ><img src="images/funny3.jpg" /><p>ngakig si lor di eh hahahah</p></div>
+                <div class="slide" ><img src="images/funny4.jpg" /><p></p></div>
+                <div class="slide" ><img src="images/funny5.jpg" /><p></p></div>
+                <div class="slide" ><img src="images/funny6.jpg" /><p>si matty nag pic nito eh hahahaha</p></div>
+                <div class="slide" ><img src="images/funny7.jpg" /><p></p></div>
+                <div class="slide" ><img src="images/funny8.jpg" /><p></p></div>
+                <div class="slide" ><img src="images/funny9.jpg" /><p></p></div>
+                <div class="slide" ><img src="images/funny10.jpg" /><p></p></div>
+                <div class="slide" ><img src="images/funny11.jpg" /><p>hahahaha</p></div>
+                <div class="slide" ><img src="images/funny12.jpg" /><p></p></div>
+                <div class="slide" ><img src="images/funny13.jpg" /><p></p></div>
+                <div class="slide" ><img src="images/funny14.jpg" /><p></p></div>
+                <div class="slide" ><img src="images/funny15.jpg" /><p></p></div>
+                <div class="slide" ><img src="images/funny16.jpg" /><p></p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Letter Scene Section -->
+    <section class="scene">
+        <div class="note">
+           <div class="note_content">
+             <p>Hi Zyleee, happy birthday!<br>
+               Sana mag enjoy ka ngayong araww😁. since poor pa ko ron ug wala koy mahatag nga gift, hatagan na lang tika ug something kung asa ko expert so ayan… website para nimo. Hahahaha! mao ra ni akong powers ehh. tas basi ma-tingala ka asa ko nakakuha ug mga pictures… gikan ra na sa GC, hahahaha.<br></p>
+               <button class="play-again-button">Back to Top</button>
+          </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="slider.js"></script>
+</body>
+</html>
