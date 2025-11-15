@@ -19,6 +19,13 @@
     -->
     <audio id="birthday-music" src="birthday_music.mp3" loop preload="auto"></audio>
 
+    <script>
+  document.addEventListener("click", () => {
+    const bgm = document.getElementById("birthday-music");
+    bgm.play().catch(() => {});
+  });
+    </script>
+
     <div class="night"></div>
     <!-- Cake Scene Section -->
     <section class="scene" id="cake-section">
@@ -113,3 +120,4 @@
 </body>
 
 </html>
+
