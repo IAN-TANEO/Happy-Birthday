@@ -17,6 +17,7 @@ function onWndLoad() {
     var rotZ = 0;
     var transY = 0;
    
+    var isDragging = false;
     var curSlide = null;
     
     var Z_DIS = 50;
@@ -61,6 +62,7 @@ function onWndLoad() {
     }
     init();
     function slideMouseDown(e) {
+       isDragging = false;
     
         if (e.touches) {
             initX = e.touches[0].clientX;
@@ -76,6 +78,7 @@ function onWndLoad() {
         document.addEventListener('mouseup', slideMouseUp, false);
         document.addEventListener('touchend', slideMouseUp, false);
     }
+
     var prevSlide = null;
    
     function slideMouseMove(e) {
@@ -88,6 +91,7 @@ function onWndLoad() {
             mouseX = e.pageX;
         }
 
+        isDragging = true;
         transX += mouseX - initX;
         rotZ = transX / 20;
 
@@ -133,6 +137,7 @@ function onWndLoad() {
           }
     }
     function slideMouseUp() {
+        var wasDragging = isDragging;
         transX = 0;
         rotZ = 0;
         transY = 0;
@@ -153,6 +158,54 @@ function onWndLoad() {
          
         document.removeEventListener('mousemove', slideMouseMove, false);
         document.removeEventListener('touchmove', slideMouseMove, false);
-     
+
+        if (!wasDragging) {
+            slideOnClick();
+        }
+    }
+
+    function resetCardStack() {
+        transX = 0;
+        rotZ = 0;
+        transY = 0;
+
+        curSlide.style.transition = 'cubic-bezier(0,1.95,.49,.73) '+TRANS_DUR+'s';
+        curSlide.style.webkitTransform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+        curSlide.style.transform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+
+        var j = 1;
+        for (var i = sliders.length -  2; i >= 0; i--) {
+            sliders[i].style.transition = 'cubic-bezier(0,1.95,.49,.73) ' + TRANS_DUR / (j + 0.9) + 's';
+            sliders[i].style.webkitTransform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + (Y_DIS*j) + 'px)' + ' translateZ(' + (-Z_DIS*j) + 'px)';
+            sliders[i].style.transform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + (Y_DIS*j) + 'px)' + ' translateZ(' + (-Z_DIS*j) + 'px)';
+            j++;
+        }
+    }
+
+    function slideOnClick() {
+        var slideToMove = curSlide;
+
+        // Animate the current slide off-screen to the left
+        slideToMove.style.transition = 'ease-out 0.5s';
+        slideToMove.style.transform = 'translateX(-350px) rotateZ(-20deg)';
+        slideToMove.style.opacity = 0;
+
+        // Remove listeners from the slide that is moving away
+        slideToMove.removeEventListener('mousedown', slideMouseDown, false);
+        slideToMove.removeEventListener('touchstart', slideMouseDown, false);
+
+        // After the animation, move the slide to the back of the stack
+        setTimeout(function () {
+            slider.insertBefore(slideToMove, slider.firstChild);
+
+            // Reset its styles for when it comes around again
+            slideToMove.style.transition = 'none';
+            slideToMove.style.opacity = '1';
+
+            // Attach events to the NEW top slide
+            attachEvents(sliders[sliders.length - 1]);
+
+            resetCardStack(); // Use the new function to reset the stack
+        }, 500);
     }
 }
